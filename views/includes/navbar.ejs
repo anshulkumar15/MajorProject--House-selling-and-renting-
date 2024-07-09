@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+	<div class="container-fluid">
+	  <a class="navbar-brand" href="/"><i class="fa-regular fa-compass"></i></a>
+	  <h1  style="color: red;">Wanderlust</h1>
+	  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" >
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <form class="d-flex" role="search">
+		<input type="search" class="form-control me-2  col-10"  id="myInput" placeholder="Search for dream house..." aria-label="Search"  onkeyup="searchFun()">
+		
+		<button class="btn btn-outline-success" type="submit">Search </button>
+	      </form>
+	      
+	 
+	  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+	    <div class="navbar-nav">
+	      <a class="nav-link "  href="/">Home</a>
+	      <!-- <a class="nav-link" href="/listings">All Listings</a>
+	      <a class="nav-link" href="/listings/new">ADD new Listings</a> -->
+	      <a class="nav-link" href="#">Pricing</a>
+	      <li class="nav-item dropdown">
+		<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		   Property
+		</a>
+		<ul class="dropdown-menu">
+		  <li><a class="dropdown-item" href="/listings">All house </a></li>
+		  <li><a class="dropdown-item" href="/listings/new">Add  house </a></li>
+		  <li><hr class="dropdown-divider"></li>
+		</ul>
+	      </li>
+	      <a class="nav-link" href="#">Sign-in</a>
+
+	     
+	    </div>
+	  </div>
+	</div>
+      </nav>

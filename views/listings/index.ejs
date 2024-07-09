@@ -1,0 +1,149 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+
+	<div class="first-card">
+           
+		<div>
+			<img src="https://media.istockphoto.com/id/104731717/photo/luxury-resort.jpg?s=612x612&w=0&k=20&c=cODMSPbYyrn1FHake1xYz9M8r15iOfGz9Aosy9Db7mI=" alt="">
+		</div>
+		<div   class="first-card-inner">
+			<h2  style="color: red;"><b>Trusted Place To Buy And Sell house</b></h2>
+			<p>"Unlock your dream home's potential with our seamless platform, where buying and selling houses becomes an effortless journey towards your next chapter."
+			</p>
+			<br><br>
+			<button class="btn btn-outline-success"    type="submit">Buy Property</button>
+			&nbsp;
+			&nbsp;
+			&nbsp;
+			<button class="btn btn-outline-success"     type="submit">Sell Property</button>
+
+			
+		</div>
+		
+
+	</div>
+	<div class="icons-all">
+		<div>
+			<i class="fa-solid fa-ranking-star"></i>
+			<p>Rankig</p>
+		</div>
+		<div>
+			<i class="fa-solid fa-bed"></i>
+			<p>Sleep well</p>
+		</div>
+		<div>
+			<i class="fa-solid fa-city"></i>
+			<p>iconic cities</p>
+		</div>
+		<div>
+			<i class="fa-solid fa-mountain-sun"></i>
+				<p>Mountain</p>
+		</div>
+		<div>
+			<i class="fa-solid fa-tractor"></i>
+						<p>Farm</p>
+		</div>
+		<div>
+			<i class="fa-solid fa-water"></i>
+						<p>Lakes</p>
+		</div>
+		<div>
+			<i class="fa-solid fa-binoculars"></i>		
+				<p>amazing view</p>
+		</div>
+		<div>
+			<i class="fa-solid fa-volleyball"></i>
+				<p>games</p>
+		</div>
+		<div>
+			<i class="fa-solid fa-chess"></i>
+							<p>castle</p>
+		</div>
+		
+	</div>
+	
+	<pre>                                        <H1   class="Popular-cities"> <i>POPULAR CITIES</i></H1>                          </pre>
+
+   <div   class="Popular-cities-card">
+
+	<div class="card-cities" style="width: 12rem;">
+		<img src="https://media-cdn.tripadvisor.com/media/photo-s/16/e0/7b/c2/picture-clicked-at-the.jpg" class="card-img-top" alt="...">
+		<div class="card-body">
+		  <h4 class="card-text">Delhi</h4>
+		</div>
+	      </div>
+        <div class="card-cities" style="width: 12rem;">
+		<img    src="https://media.istockphoto.com/id/1307189136/photo/gateway-of-india-mumbai-maharashtra-monument-landmark-famous-place-magnificent-view-without.jpg?s=612x612&w=0&k=20&c=gGzzkXY5bAVbRbokzrjvkt7Ve-Z3yzSVN04NaMqyBB8=" class="card-img-top" alt="...">
+		<div class="card-body">
+		  <h4 class="card-text">Mumbai</h4>
+		</div>
+	      </div>
+        <div class="card-cities" style="width: 12rem;">
+		<img src=https://marriottnews.brightspotcdn.com/dims4/default/d8874ff/2147483647/strip/true/crop/1023x717+0+0/resize/1023x717!/quality/100/?url=https%3A%2F%2Fmarriottnews.brightspotcdn.com%2F24%2Fe7%2F8358dbef4b5680d90a8546b88315%2Fjw-marriott-goa-pool-small-copy.jpg class="card-img-top" alt="...">
+		<div class="card-body">
+		  <h4 class="card-text">Goa</h4>
+		</div>
+	      </div>
+        <div class="card-cities" style="width: 12rem;">
+		<img src=https://www.travelandleisure.com/thmb/P67PtX_g34q6mojlfa5405HdLuw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-city-palace-TODOJAIPUR1023-767324cae1a9491696d6a53a96ffc085.jpg class="card-img-top" alt="...">
+		<div class="card-body">
+		  <h4 class="card-text">Jaipur</h4>
+		</div>
+	      </div>
+        <div class="card-cities" style="width: 12rem;">
+		<img src=https://t3.ftcdn.net/jpg/02/66/23/02/360_F_266230274_PXTG12zAeMOchSQJ6jBLWJeczZpaPDCf.jpg class="card-img-top" alt="...">
+		<div class="card-body">
+		  <h4 class="card-text">Kasmir</h4>
+		</div>
+	      </div>
+        
+   </div>
+   
+
+
+<h1   class="find-property"><i>HERE FIND THE PROPERTY</i></h1>
+
+
+
+
+
+	<!-- <form action="/listings/new" method="GET">
+		<button>create New Listing</button>
+		
+	</form> -->
+	<div class="row row-cols-lg-3  row-cols-md-2  row-cols-sm-1"  >
+		<% for(let listing of allListings){ %>
+			<a href="/listings/<%= listing._id %>" class="listing-link">
+
+			<div class="card col" >
+				<img src="<%= listing.image %>"
+				 class="card-img-top" alt="listing-image"
+				   style="height:15rem"  >
+				   <!-- <div class="card-img-overlay"  ></div> -->
+				<div class="card-body">
+				  <div class="card-text">
+					<br><%= listing.title %> <br>
+					<%= listing.price.toLocaleString("en-IN") %>00$
+					<br><br>
+				  </div>
+				  <div>
+					<button class="btn btn-outline-success"  style="width: 170px ;  background-color: green;   color: black;  border-radius: 1rem;"   type="submit">Buy Property</button>
+					<button class="btn btn-outline-success"    style="width: 170px;  background-color: rgb(203, 46, 46);    color: dblack;border-radius: 1rem;"   type="submit">Contact</button>
+				  </div>
+				 
+				  
+				  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+				
+			</div>
+			
+				
+			      </div>
+			      
+			</a>
+			      <% } %>
+			     
+			      
+	</div>
+ 
+
+</body>
